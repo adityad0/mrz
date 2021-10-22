@@ -1,5 +1,6 @@
 # mrz
 Encode and Decode machine readable zones on passports, visas and other documents.
+Currently supporting only TD3 type passports
 
 Written in Python, this project will be able to read the MRZ from an image or decode the MRZ from text and return all the data in an MRZ.
 
