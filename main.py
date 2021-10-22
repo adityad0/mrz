@@ -187,5 +187,15 @@ def decode(mrz_f_line, mrz_s_line):
     final_check = mrz_s_line[-1]
     # print("Final Check Digit: " + final_check)
 
-decode("P<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<", "L898902C<3UTO6908061F9406236ZE184226B<<<<<14")
-# decode("P<GBRDESAI<<ADITYA<GIRISH<<<<<<<<<<<<<<<<<<<", "1241744878GBR0111296M3104231<<<<<<<<<<<<<<14")
+# decode("P<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<", "L898902C<3UTO6908061F9406236ZE184226B<<<<<14")
+
+def image_text_processor():
+    from image_reader import get_data_from_image
+    read_text = get_data_from_image()
+    read_text = read_text.replace(" ", "")
+    return read_text
+
+# print(image_text_processor())
+text_from_image = image_text_processor()
+print(text_from_image)
+# decode(text_from_image)
